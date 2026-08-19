@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Penny.Protocol\Penny.Protocol.csproj" />
+    <ProjectReference Include="..\Penny.Network\Penny.Network.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Penny.Controller</RootNamespace>
+    <AssemblyName>Penny.Controller</AssemblyName>
+  </PropertyGroup>
+
+</Project>

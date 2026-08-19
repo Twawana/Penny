@@ -7,12 +7,6 @@
     "quality": 70,
     "codec": "jpeg"
   },
-  "security": {
-    "requireApproval": true,
-    "pinValidityMinutes": 5,
-    "maxAuthAttemptsPerWindow": 5,
-    "authWindowMinutes": 2
-  },
   "logging": {
     "minimumLevel": "Information",
     "directory": "%LOCALAPPDATA%/Penny/logs"

@@ -109,6 +109,24 @@ public sealed class AgentSessionAuthenticator
 
         var sessionId = Guid.NewGuid();
         var sessionToken = SessionTokenGenerator.Generate();
+
+        var sessionStartEnvelope = new ProtocolEnvelope
+        {
+            Version = ProtocolSerializer.CurrentVersion,
+            Type = MessageType.SessionStart,
+            Sequence = 1,
+            TimestampUtc = DateTimeOffset.UtcNow,
+            CorrelationId = authEnvelope.CorrelationId,
+            PayloadJson = ProtocolSerializer.SerializePayload(new SessionStartPayload
+            {
+                SessionId = sessionId,
+                SessionToken = sessionToken,
+                ScreenWidth = 0,
+                ScreenHeight = 0
+            })
+        };
+        await transport.SendEnvelopeAsync(sessionStartEnvelope, ct).ConfigureAwait(false);
+
         return AgentHandshakeResult.Success(sessionId, sessionToken, authRequest.ControllerDisplayName);
     }
 

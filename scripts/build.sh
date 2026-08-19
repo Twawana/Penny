@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Restores, builds, and tests the OS-agnostic Penny projects
-# (Penny.Core, Penny.Security, Penny.Protocol, Penny.Network, and their
-# test projects). Windows-only projects (Penny.Agent, Penny.Controller,
-# Penny.Capture, Penny.Input) are added to this script once they exist.
+# (Penny.Core, Penny.Security, Penny.Protocol, Penny.Network, Penny.Agent,
+# Penny.Controller, and test projects). Penny.Capture and Penny.Input are
+# added once they exist.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."

@@ -6,3 +6,4 @@ obj/
 artifacts/
 publish/
 *.pfx
+config/agent.settings.json
