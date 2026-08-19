@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Penny.Network</RootNamespace>
+    <AssemblyName>Penny.Network</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Penny.Core\Penny.Core.csproj" />
+    <ProjectReference Include="..\Penny.Protocol\Penny.Protocol.csproj" />
+    <ProjectReference Include="..\Penny.Security\Penny.Security.csproj" />
+  </ItemGroup>
+
+</Project>
